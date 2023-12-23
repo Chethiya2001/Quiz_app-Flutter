@@ -15,5 +15,4 @@ workflows:
       email:
         recipients:
           - chethiyabandaraherath@email.com
-        notify_on_build_start: true
-        notify_on_build_finish: true
+
