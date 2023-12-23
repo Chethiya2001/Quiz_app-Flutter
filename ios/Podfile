@@ -4,5 +4,5 @@ platform :ios, '9.0'
 target 'Runner' do
   use_frameworks!
   # Add your pods here
-  pod 'path_provider_foundation', '~> 2.0.0'
+  pod 'path_provider_foundation', '~> 2.3.1'
 end
