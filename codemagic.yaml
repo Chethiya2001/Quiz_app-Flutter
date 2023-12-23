@@ -1,0 +1,20 @@
+workflows:
+  version: 2
+
+iOS_build:
+  environment:
+    flutter: stable
+
+  scripts:
+    - flutter pub get
+    - flutter build ios
+
+  artifacts:
+    - build/ios/*.ipa
+
+  publishing:
+    email:
+      recipients:
+        - chethiyabandaraherath@email.com
+      notify_on_build_start: true
+      notify_on_build_finish: true
