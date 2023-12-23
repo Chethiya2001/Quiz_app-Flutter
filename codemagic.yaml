@@ -1,6 +1,5 @@
+version: 2
 workflows:
-  version: 2
-
   iOS_build:
     environment:
       flutter: stable
@@ -18,4 +17,3 @@ workflows:
           - chethiyabandaraherath@email.com
         notify_on_build_start: true
         notify_on_build_finish: true
-
