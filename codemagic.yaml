@@ -6,6 +6,10 @@ workflows:
 
     scripts:
       - flutter pub get
+      - |
+        open ios/Runner.xcworkspace
+        xcodebuild -workspace ios/Runner.xcworkspace -scheme Runner -sdk iphoneos -configuration Release build CODE_SIGNING_ALLOWED=NO
+
       - flutter build ios
 
     artifacts:
@@ -15,4 +19,4 @@ workflows:
       email:
         recipients:
           - chethiyabandaraherath@email.com
-
+        
