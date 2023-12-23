@@ -4,14 +4,14 @@ workflows:
       flutter: stable
 
     scripts:
-      - flutter clean
-      - flutter pub get
-      - open ios/Runner.xcworkspace
-      - xcodebuild -workspace ios/Runner.xcworkspace -scheme Runner -sdk iphoneos -configuration Release build CODE_SIGNING_ALLOWED=NO
-      - flutter build ios
+    - flutter pub get
+    - cd ios
+    - pod install
+    - cd ..
+    - flutter build ios --release --no-codesign
 
-    artifacts:
-      - build/ios/*.ipa
+  artifacts:
+    - build/ios/*.ipa
 
     publishing:
       email:
